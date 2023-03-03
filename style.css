@@ -1,0 +1,43 @@
+
+body{
+    margin: 0px;
+    padding: 1.5rem 0 0 4.0rem;
+}
+
+div#display{
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    background-color: black;
+    height:8.0rem;
+    width: 14.5rem;
+}
+ul#keys{
+    border-bottom-left-radius:0.4rem;
+    border-bottom-right-radius:0.4rem;
+    margin:0px;
+    background-color:rgba(16, 12, 12, 0.786); 
+    /* padding-left: 0.5rem; */
+    padding: 1.0rem 0rem 1.0rem 1.0rem;
+    width: 13.5rem;
+    list-style-type: none;
+}
+button{
+    border:solid black 1px;
+    width: 3.0rem;
+    height: 2.5rem;
+}
+.yellow{
+    background-color: orange;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+ul{
+    padding-top: 1.0rem;
+}
+li{
+    padding: 0 0 0.25rem 0rem;
+}

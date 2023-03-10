@@ -3,6 +3,12 @@ body{
     margin: 0px;
     padding: 1.5rem 0 0 4.0rem;
 }
+h1{
+    padding-top:4rem;
+    padding-left: 3rem;
+    color: white;
+    font-size: 3rem;
+}
 
 div#display{
     border-top-left-radius: 0.4rem;

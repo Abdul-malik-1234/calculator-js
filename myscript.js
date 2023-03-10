@@ -11,26 +11,27 @@ let call=(op1=0,a,op2=0)=>{
             //Perform addition and updating operand1 for next operation
             ans=op1+op2;
             operand1=ans;
+            operand2=0;
             return ans;
         case "-":
             //Perform division and updating operand1 for next operation
             ans=op1-op2;
             operand1=ans;
+            operand2=0;
             return ans;
         case "*":
             //Perform multiplication and updating operand1 for next operation
             ans=op1*op2;
             operand1=ans;
+            operand2=0;
             return ans;
         case "/":
             //Perform division and updating operand1 for next operation
             ans=op1/op2;
             operand1=ans;
+            operand2=0;
             return ans;
         case "C":
-            //clear operand1 and operand2 and return 0;
-            operand1=0;
-            operand2=0;
             return 0;
         default:
             //If nothing happens then return 0
@@ -40,7 +41,6 @@ let call=(op1=0,a,op2=0)=>{
 
 function addingListenerToObject(obj,elem){
     obj.onclick=f1=()=>{
-        console.log(elem);
         if(elem>="0" && elem<="9"){
             if(operand1==0){
                 operand1=elem;
@@ -52,12 +52,17 @@ function addingListenerToObject(obj,elem){
         else if(elem=="*" || elem=="/"|| elem=="-"|| elem=="+" ){
             operator=elem;
             let val=call(operand1,operator,operand2);
-            console.log(val);
         }
-        else if(elem=="=" || elem=="C"){
+        else if(elem=="=" ){
             const h1=document.getElementsByTagName("h1")[0];
             let val=call(operand1,operator,operand2);
-            console.log(val);
+            h1.innerHTML=val.toString();
+        }
+        else if(elem=="C"){
+            operand1=0;
+            operand2=0;
+            const h1=document.getElementsByTagName("h1")[0];
+            let val=Number(0);
             h1.innerHTML=val.toString();
         }
     }
